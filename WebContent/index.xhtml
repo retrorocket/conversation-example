@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Application</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h1>Conversation Example - index.xhtml</h1>
+		<div>
+			<h:commandButton value="mowMow#startConversation"
+				action="#{mowMow.startConversation()}" />
+			<h:commandButton value="nyanNyan#startConversation"
+				action="#{nyanNyan.startConversation()}" />
+		</div>
+		<div>
+			<h:commandButton value="mowMow#endConversation"
+				action="#{mowMow.endConversation()}" />
+			<h:commandButton value="mowMow#endConversation"
+				action="#{nyanNyan.endConversation()}" />
+		</div>
+		<div>
+			<h:commandButton value="mowMow#touched - #{mowMow.touchedCount}"
+				action="#{mowMow.touch}" />
+			<h:commandButton value="nyanNyan#touched - #{nyanNyan.touchedCount}"
+				action="#{nyanNyan.touch}" />
+			<h:commandButton value="nyanNyan#touched - #{wanWan.touchedCount}"
+				action="#{wanWan.touch}" />
+		</div>
+	</h:form>
+	<div>
+		<h:outputText value="#{mowMow.mem}" />
+	</div>
+	<div>
+		<h:outputText value="#{nyanNyan.mem}" />
+	</div>
+</h:body>
+</html>
